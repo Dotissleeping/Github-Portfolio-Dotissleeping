@@ -80,8 +80,6 @@ const GITHUB_USERNAME = 'Dotissleeping'; // ← change this to your username
 ### 3. Choose which repos to show
 
 ```js
-// Show ALL public repos (default):
-const PINNED_REPOS = null;
 
 // Or pick specific ones:
 const PINNED_REPOS = ['my-project', 'another-repo', 'cool-app'];
@@ -136,7 +134,7 @@ All colors are CSS variables in `style.css` — change one and it updates everyw
 ![Google Fonts](https://img.shields.io/badge/Google%20Fonts-4285F4?style=flat-square&logo=google&logoColor=white)
 ![Devicons](https://img.shields.io/badge/Devicons-000000?style=flat-square&logo=devdotto&logoColor=white)
 
-- **Fonts** — Cormorant Garamond (serif) + Montserrat (sans-serif) via Google Fonts
+- **Font** — Cormorant Garamond (serif) + Montserrat (sans-serif) via Google Fonts
 - **Icons** — [Devicons](https://devicons.dev) via jsDelivr CDN
 - **No frameworks** — pure vanilla HTML, CSS, and JavaScript. Zero dependencies.
 
