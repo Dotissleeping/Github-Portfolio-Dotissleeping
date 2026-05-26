@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dotissleeping — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon-512.png" type="image/png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="favicon-512.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PROGRESS BAR -->
+  <div id="progressBar" class="progress-bar"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-brand">
+        <span class="sidebar-label">Portfolio of</span>
+        <h1 class="artist-name">Dotissleeping</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#home"     class="nav-link active">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills"   class="nav-link">Skills</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="sidebar-year">© 2026</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile hamburger -->
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <main class="main-content">
+
+    <!-- ── HOME ── -->
+    <section id="home" class="section section-home">
+      <div class="home-layout">
+
+        <!-- LEFT: text -->
+        <div class="home-text reveal">
+          <p class="home-label">Bachelor of Science in Information Technology · BSIT</p>
+          <h2 class="home-title"><span id="typingWord">Building</span> things<br><em>with code</em></h2>
+          <p class="home-tagline">A collection of projects spanning web development, scripts, and experiments — built with curiosity and a love for making things work.</p>
+          <div class="home-meta">
+            <p>github.com/Dotissleeping</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: avatar + stats -->
+        <div class="home-featured reveal reveal-delay">
+          <!-- Stats card -->
+          <div class="home-stats-card">
+            <div class="stat-row" id="statRepos">
+              <span class="stat-num">—</span>
+              <span class="stat-label">Public Repos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-row" id="statStars">
+              <span class="stat-num">—</span>
+              <span class="stat-label">Total Stars</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-row" id="statLangs">
+              <span class="stat-num">—</span>
+              <span class="stat-label">Languages Used</span>
+            </div>
+            <div class="github-badge">
+              <a href="https://github.com/Dotissleeping" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                View GitHub Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="home-scroll-hint">Scroll to explore ↓</div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects" class="section section-projects">
+      <div class="section-header reveal">
+        <span class="section-number">01</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-desc">Selected repositories from GitHub — click any project to explore it.</p>
+      </div>
+      <div id="projectsLoading" class="loading-state">
+        <div class="loading-dots"><span></span><span></span><span></span></div>
+        <p>Fetching repositories…</p>
+      </div>
+      <div id="projectsError" class="error-state hidden">
+        <p>Could not load repositories. <a href="https://github.com/Dotissleeping" target="_blank">View on GitHub →</a></p>
+      </div>
+      <div id="projectsGrid" class="projects-grid hidden"></div>
+      <p class="pinned-notice hidden" id="pinnedNotice">
+        ✦ Showing selected repositories only. <button id="showAllBtn">Show all repos</button>
+      </p>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills" class="section section-skills">
+      <div class="section-header reveal">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-desc">Technologies and tools I work with.</p>
+      </div>
+      <div id="skillsBody" class="skills-body reveal">
+
+        <!-- Tech stack icon grid -->
+        <div>
+          <h3 class="skills-cat-label">Tech Stack</h3>
+          <div class="tech-stack-grid">
+            <div class="tech-icon-block">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+              <span class="tech-icon-name">HTML</span>
+            </div>
+            <div class="tech-icon-block">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+              <span class="tech-icon-name">CSS</span>
+            </div>
+            <div class="tech-icon-block">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+              <span class="tech-icon-name">JavaScript</span>
+            </div>
+            <div class="tech-icon-block">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              <span class="tech-icon-name">Python</span>
+            </div>
+            <div class="tech-icon-block">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+              <span class="tech-icon-name">Java</span>
+            </div>
+            <div class="tech-icon-block">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+              <span class="tech-icon-name">Git</span>
+            </div>
+            <div class="tech-icon-block">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+              <span class="tech-icon-name">GitHub</span>
+            </div>
+            <div class="tech-icon-block">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+              <span class="tech-icon-name">VS Code</span>
+            </div>
+            <!-- Add or remove icons below as needed -->
+          </div>
+        </div>
+
+        <!-- Auto-detected from repos -->
+        <div>
+          <h3 class="skills-cat-label">Detected from Repositories</h3>
+          <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+
+        <div class="skills-manual">
+          <h3 class="skills-cat-label">Tools & Others</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub Pages</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Terminal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact" class="section section-contact">
+      <div class="section-header reveal">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-desc">Open to collaboration and conversation.</p>
+      </div>
+      <div class="contact-body reveal">
+        <div class="contact-item">
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/Dotissleeping" target="_blank" rel="noopener" class="contact-value">github.com/Dotissleeping</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="site-footer">
+      <span class="footer-name">Dotissleeping</span>
+      <span class="footer-divider">—</span>
+      <span class="footer-year">© 2026</span>
+      <span class="footer-divider">—</span>
+      <a href="https://github.com/Dotissleeping" target="_blank" rel="noopener" class="footer-link">github.com/Dotissleeping</a>
+    </footer>
+
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div id="modal" class="lightbox" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="lightbox-overlay" id="modalOverlay"></div>
+    <div class="lightbox-panel modal-panel">
+      <button class="lightbox-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-layout">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-lang-dot" id="modalLangDot"></div>
+            <span class="modal-lang" id="modalLang"></span>
+          </div>
+          <h3 class="modal-title" id="modalTitle"></h3>
+          <p class="modal-desc" id="modalDesc"></p>
+          <div class="modal-meta">
+            <div class="modal-meta-item">
+              <span class="modal-meta-label">Stars</span>
+              <span class="modal-meta-val" id="modalStars"></span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="modal-meta-label">Forks</span>
+              <span class="modal-meta-val" id="modalForks"></span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="modal-meta-label">Updated</span>
+              <span class="modal-meta-val" id="modalUpdated"></span>
+            </div>
+          </div>
+          <div class="modal-languages" id="modalLanguages"></div>
+          <a href="#" id="modalLink" target="_blank" rel="noopener" class="modal-btn">View on GitHub →</a>
+        </div>
+        <div id="modalImgWrap" class="modal-img-wrap hidden">
+          <img id="modalImg" src="" alt="Project preview" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
