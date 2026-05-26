@@ -16,7 +16,7 @@ Hosted on GitHub Pages · Powered by the GitHub REST API
 
 ## 👤 Author
 
-**Aldrich Fernandez** · `@Dotissleeping`
+ `@Dotissleeping`
 Bachelor of Science in Information Technology (BSIT)
 📍 Philippines · 🐙 [github.com/Dotissleeping](https://github.com/Dotissleeping)
 
