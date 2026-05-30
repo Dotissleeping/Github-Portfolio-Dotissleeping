@@ -3,7 +3,7 @@
 ═══════════════════════════════════════════════════ */
 
 const GITHUB_USERNAME = 'Dotissleeping';
-const PINNED_REPOS = ['VC-Cozy-Coffee', 'VibeCode-atmosify-App', 'Atmosify-App-Android'];
+const PINNED_REPOS = ['VC-Cozy-Coffee', 'VibeCode-atmosify-App', 'Atmosify-App-Android', 'Stokku', 'StudyOS'];
 
 const LANG_COLORS = {
   JavaScript:'#f1e05a', TypeScript:'#3178c6', Python:'#3572A5',
